@@ -14,12 +14,13 @@ import aveg from './assets/aver.svg'
 function App(){
 
   const [toggle, setToggle] = useState(false)
-
+  const [text , setText] = useState('the average')
   const toggler = () =>{
-    toggle ? setToggle(false): setToggle(true);
+    toggle ? setToggle(false)  : setToggle(true)  ;
   }
 
-  
+ 
+ 
          return(
         <div style={{ 
           backgroundImage: `url(${Backround})`
@@ -50,7 +51,6 @@ function App(){
 <img src={theup} style={{marginLeft:'35vh', marginTop:'12vh'}} alt=''/>
 </div>
 
-{/* <button className='btn' onClick={handleClick} id='unemp'>1</button> */}
 
               <Plot className='content'
             data={[
@@ -75,9 +75,13 @@ function App(){
             onClick={(...data)=> console.log(data)}
             
             />  
+            <div>
+                        <button className="btn" style={{marginTop:'10vh', marginLeft:'95vh'}} value={text}   onClick={toggler} >  {text}</button>
+</div>
+
             <img src={age} alt='' style={{marginLeft:'35vh', marginTop:'15vh'}}/>
-            <button  onClick={toggler}>the younger  </button>
-            {toggle ? <img src={mepage} alt='' style={{marginLeft:'5vh'}}/> : <img src={aveg} alt='' style={{marginLeft:'5vh'}}/>}
+            {toggle ?<img src={mepage} alt='' style={{marginLeft:'5vh'}}/> : <img src={aveg} alt='' style={{marginLeft:'5vh'}}/>}
+           
         </div>
           )
    }
