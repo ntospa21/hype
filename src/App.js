@@ -1,79 +1,83 @@
-import React from 'react';
+import React , {useState}from 'react';
 import Plot from 'react-plotly.js';
 import './sec.css'
-
-
+import  Backround from './assets/Backround.svg'
+import eprs from './assets/eprs.svg'
+import dentra from './assets/dentra.png'
+import introd from './assets/Introduction.svg'
+import icon from './assets/EP LOGO.png'
+import member from './assets/Member,mission,benefits icon.svg'
+import theup from './assets/The european parliament members.svg'
+import age from './assets/Age of MEPs by member stateThere is an average age of MEPs, together with the maximum and minimum age, per Member State. The average age of Members on.svg'
+import mepage from './assets/MEP age icon.svg'
+import aveg from './assets/aver.svg'
 function App(){
-         return(
-        <div className="container">
-              <div className='koumpaki' >
-   </div>
-  
 
-            <h5>What are the issues which made you vote in the recent European elections? Firstly? Any others?</h5>
-            <Plot className='content'
+  const [toggle, setToggle] = useState(false)
+
+  const toggler = () =>{
+    toggle ? setToggle(false): setToggle(true);
+  }
+
+  
+         return(
+        <div style={{ 
+          backgroundImage: `url(${Backround})`
+          
+        }}>
+        <div>
+              <img src={eprs}
+                alt=''
+              />
+              <img src={icon} style={{marginLeft:'155vh', marginBottom:'18vh'}} alt='' />
+
+</div>
+<div   className='tree'
+>
+  <img 
+  width={750}
+  height={500}
+  alt=''
+  src= {dentra}
+    style={{marginLeft: '60vh'}}
+  />
+</div>
+<div>
+<img src={introd} style={{marginLeft:'60vh'}} alt=''/>
+</div>
+<img src={member} style={{marginLeft:'40vh'}} alt=''/>
+<div>
+<img src={theup} style={{marginLeft:'35vh', marginTop:'12vh'}} alt=''/>
+</div>
+
+{/* <button className='btn' onClick={handleClick} id='unemp'>1</button> */}
+
+              <Plot className='content'
             data={[
                 {
                 type: 'bar',
                 title: "Share of committee chairs by political group",
+
                 y: ['EPP', 'S&D', 'ECR', 'ALDE', 'GREENS/EFA', 'GUE/NGL', 'EFDD', 'ENF', 'NI'],
-                x:[29.2,25.2,9.6,9.0,6.9,6.8,5.9,4.8,2.6],
+                x:[29.2,25.2,9.6,9.0,6.9,6.8,5.9,4.8,2.6], 
                 orientation:'h',
                 groupnorm:'percent',
                 marker: {
                 color: ['grey', 'red', 'darkblue', 'yellow', 'darkgreen', 'lightbrown','cyan', 'orange', 'pink'],
+                backgroundImage: {Backround},
                     width: 1
             },
                 }
             ]}
-            layout={{width:800, height:500, margin:500,  orientation: 'h' }}
+            layout={{width:550, height:400, margin:500,  orientation: 'h', paper_bgcolor:'#B5F6F5' , plot_bgcolor:'#B5F6F5'}}
+            style={{marginLeft:'85vh', marginTop: '-47vh'}}
+            onUpdate={(data)=>console.log(data)}
+            onClick={(...data)=> console.log(data)}
             
-            
-            />   <div className='deutero'>    
-             <h5> Share of committee chairs by political group</h5>
-             <Plot className='content'
-            data={[
-                {
-                type: "pie",
-                labels: ["EPP", "S&D", "ECR", "ALDE", "GREENS/EFA", "GUE/NGL", "EFDD", "ENF", "NI"],
-                values: [29.2,25.2,9.6,9.0,6.9,6.8,5.9,4.8,2.6],
-                domain:{column: 0},
-                name: 'Share of committee chairs by political group',
-                hoverinfo: 'label+percent+name',
-                hole: .55 ,
-                   color: ['grey', 'red', 'darkblue', 'yellow', 'darkgreen', 'lightbrown','cyan', 'orange', 'pink'],
-                    width: 1
-            },
-                
-            ]}
-            layout={{margin:{"l": 0, "r": 0, "b": 0, "t": 0}} }
-            
-            
-            />
-          </div> 
-            <div className='trito'> 
-            <h5> Size of political groups</h5>
-            <Plot className='content'
-            data={[
-                {
-                type: 'bar',
-              
-                y: ['NI', 'ENF', 'EFDD', 'GUE/NGL', 'GREENS/EFA',  'ALDE','ECR', 'S&D', 'EPP'],
-                x:[20,36,44,51,52,68,72,189,219],
-                orientation:'h',
-                marker: {
-                color: ['grey', 'red', 'darkblue', 'yellow', 'darkgreen', 'lightbrown','cyan', 'orange', 'pink'],
-                    width: 1
-            },
-                }
-            ]}
-            layout={{width:800, height:500, margin:500, orientation: 'h' }}
-            
-            
-            />
-            
-            </div>
-       
+            />  
+            <img src={age} alt='' style={{marginLeft:'35vh', marginTop:'15vh'}}/>
+            <button  onClick={toggler}>the younger  </button>
+            {toggle ? <img src={mepage} alt='' style={{marginLeft:'5vh'}}/> : <img src={aveg} alt='' style={{marginLeft:'5vh'}}/>}
         </div>
           )
    }
