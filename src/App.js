@@ -1,5 +1,4 @@
 import React , {useState}from 'react';
-import Plot from 'react-plotly.js';
 import './sec.css'
 import  Backround from './assets/Backround.svg'
 import eprs from './assets/eprs.svg'
@@ -18,6 +17,7 @@ import iconciti from './assets/Icon citizens.svg'
 import participate from './assets/Participate in programs that help you find a job or learn a  new oneThe Employment committee is responsible for monitoring employment and employment p.svg'
 import happy from './assets/Icon happy.svg'
 import outlook from './assets/Outlook.png'
+import Dokimi from './dokimi';
 function App(){
 
   const [toggle, setToggle] = useState(false)
@@ -49,7 +49,7 @@ function App(){
   height={500}
   alt=''
   src= {dentra}
-    style={{marginLeft: '60vh'}}
+    style={{marginLeft: '60vh', marginTop:'-20vh'}}
   />
 </div>
 <div>
@@ -59,31 +59,11 @@ function App(){
 <div>
 <img src={theup} style={{marginLeft:'35vh', marginTop:'12vh'}} alt=''/>
 </div>
+<div className='chartaki'>
+<Dokimi/>
+</div>
 
-
-              <Plot className='content'
-            data={[
-                {
-                type: 'bar',
-                title: "Share of committee chairs by political group",
-
-                y: ['EPP', 'S&D', 'ECR', 'ALDE', 'GREENS/EFA', 'GUE/NGL', 'EFDD', 'ENF', 'NI'],
-                x:[29.2,25.2,9.6,9.0,6.9,6.8,5.9,4.8,2.6], 
-                orientation:'h',
-                groupnorm:'percent',
-                marker: {
-                color: ['grey', 'red', 'darkblue', 'yellow', 'darkgreen', 'lightbrown','cyan', 'orange', 'pink'],
-                backgroundImage: {Backround},
-                    width: 1
-            },
-                }
-            ]}
-            layout={{width:550, height:400, margin:500,  orientation: 'h', paper_bgcolor:'#B5F6F5' , plot_bgcolor:'#B5F6F5'}}
-            style={{marginLeft:'85vh', marginTop: '-47vh'}}
-            onUpdate={(data)=>console.log(data)}
-            onClick={(...data)=> console.log(data)}
             
-            />  
           
             <img src={age} alt='' style={{marginLeft:'35vh', marginTop:'10vh'}}/>
             {toggle ? <div >
@@ -94,17 +74,17 @@ function App(){
                         <button className="btn" style={{ marginLeft:'85vh'}}    onClick={toggler} >   the younger</button>
                         <div style={{marginLeft:'86vh'}}>
 <img src={aveg} alt='' style={{marginLeft:'5vh'}}/></div> </div>}
-
+<div>
 <img src={work} alt='' style={{marginTop:'10vh', marginLeft:'35vh'}}/> 
-<p style={{marginLeft:'96vh', fontSize:28}}>EP's work  examples:
+<p style={{marginLeft:'103vh', fontSize:20, marginTop:'-20vh'}}>EP's work  examples:
 </p>
 
-<p style={{marginLeft:'100vh', fontSize:28}}>Passing EU laws{<button className='btn' onClick={()=>alert('do sth')}>Read more</button>}
+<p style={{marginLeft:'106vh', fontSize:20}}>Passing EU laws{<button className='btn' onClick={()=>alert('do sth')}>Read more</button>}
 </p>
 
-<p style={{marginLeft:'69vh', fontSize:28}}>Democratic scrunity of all EU Institutions{<button className='btn' onClick={()=>alert('do sth')}>Read more</button>}
+<p style={{marginLeft:'84vh', fontSize:20}}>Democratic scrunity of all EU Institutions{<button className='btn' onClick={()=>alert('do sth')}>Read more</button>}
 </p>
-
+</div>
 
 <img src={mission} alt='' style={{marginLeft:'40vh'}}/>
 <img src={citi} alt='' style={{marginLeft:'40vh', marginTop:'15vh'}}/>
@@ -123,6 +103,7 @@ function App(){
 
 
 </div>
+
 
           )
    }
