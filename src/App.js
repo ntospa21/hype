@@ -1,5 +1,5 @@
 import React , {useState}from 'react';
-import './sec.css'
+import { GlobalStyle } from './globalstyles';
 import  Backround from './assets/Backround.svg'
 import eprs from './assets/eprs.svg'
 import dentra from './assets/dentra.png'
@@ -18,9 +18,11 @@ import participate from './assets/Participate in programs that help you find a j
 import happy from './assets/Icon happy.svg'
 import outlook from './assets/Outlook.png'
 import Dokimi from './dokimi';
+import './sec.css'
 function App(){
 
   const [toggle, setToggle] = useState(false)
+ 
   
   const toggler = () =>{
     toggle ? setToggle(false)  : setToggle(true)  ;
@@ -31,8 +33,8 @@ function App(){
  
  
          return(
-        <div style={{ 
-          backgroundImage: `url(${Backround})`
+        <div  className='app' style={{ 
+          backgroundImage: `url(${Backround})`,
           
         }}>
         <div>

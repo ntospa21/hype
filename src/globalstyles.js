@@ -1,7 +1,18 @@
-.app {
-  flex: 100%;
-  max-width: 100%;
+import {createGlobalStyle } from 'styled-components';
+
+ export const GlobalStyle = createGlobalStyle 
+ `
+.square {
+  display: flex;
+  flex-direction: row;
+  margin-left: -35vh;
 }
+
+.buttons {
+  margin-left: 50vh;
+  margin-top: 20px;
+}
+
 .btn {
   width: 100px;
   height: 30px;
@@ -18,6 +29,18 @@
   background-color: azure;
 }
 
+.container {
+  flex-direction: row;
+  float: left;
+  clear: none;
+}
+.deutero {
+  margin-left: 110vh;
+  margin-top: -60vh;
+}
+.trito {
+  margin-top: 10vh;
+}
 .tree {
   margin-right: 150px;
 }
@@ -34,14 +57,4 @@
   margin-top: -50vh;
 }
 
-@media screen and (max-width: 800px) {
-  .app {
-    flex: 100%;
-    max-width: 100%;
-  }
-
-  .btn {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
+`
