@@ -1,7 +1,7 @@
-.app {
+/* .app {
   flex: 100%;
-  max-width: 100%;
-}
+  width: 100%;
+} */
 .btn {
   width: 100px;
   height: 30px;
@@ -34,14 +34,20 @@
   margin-top: -50vh;
 }
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
   .app {
     flex: 100%;
-    max-width: 100%;
+    width: 100%;
   }
 
   .btn {
     flex: 50%;
     max-width: 50%;
   }
-}
+  .chartaki {
+    height: 50%;
+    width: 50%;
+    margin-left: 85vh;
+    margin-top: -50vh;
+  }
+} */

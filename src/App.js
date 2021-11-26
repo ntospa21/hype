@@ -1,4 +1,4 @@
-import React , {useState}from 'react';
+import React , {useState, useEffect}from 'react';
 import { GlobalStyle } from './globalstyles';
 import  Backround from './assets/Backround.svg'
 import eprs from './assets/eprs.svg'
@@ -27,8 +27,6 @@ function App(){
   const toggler = () =>{
     toggle ? setToggle(false)  : setToggle(true)  ;
   }
-
- 
   
  
  
