@@ -1,5 +1,4 @@
 import React , {useState, useEffect}from 'react';
-import { GlobalStyle } from './globalstyles';
 import  Backround from './assets/Backround.svg'
 import eprs from './assets/eprs.svg'
 import dentra from './assets/dentra.png'
@@ -19,6 +18,7 @@ import happy from './assets/Icon happy.svg'
 import outlook from './assets/Outlook.png'
 import Dokimi from './dokimi';
 import './sec.css'
+
 function App(){
 
   const [toggle, setToggle] = useState(false)
@@ -31,6 +31,7 @@ function App(){
  
  
          return(
+           <div className='content'>
         <div  className='app' style={{ 
           backgroundImage: `url(${Backround})`,
           
@@ -101,7 +102,7 @@ function App(){
 <img src={outlook} alt='' style={{marginLeft:'10vh'}}/>
 
 
-
+</div>
 </div>
 
 

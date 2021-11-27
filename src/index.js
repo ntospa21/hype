@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Teliko from './Teliko';
+import Respo from './Responsive';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Teliko />
+    <Respo />
   </React.StrictMode>,
   document.getElementById('root')
 );
