@@ -33,7 +33,7 @@ function App(){
          return(
            <div className='content'>
         <div  className='app' style={{ 
-          backgroundImage: `url(${Backround})`,
+          backgroundImage: `url(${Backround})`, width:'500%'
           
         }}>
         <div>
