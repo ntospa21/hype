@@ -89,7 +89,7 @@ function App(){
 
 <img src={mission} alt='' style={{marginLeft:'40vh'}}/>
 <div className='citi'>
-<img src={citi} alt='' style={{}}/>
+<img src={citi} alt='' />
 </div>
 <div>
 <button className='btn' style={{marginLeft:'108vh', marginTop:'-10vh'}}>Read more</button>
@@ -98,8 +98,12 @@ function App(){
 <div>
 <img src={iconciti} alt='' style={{marginLeft:'50vh', marginTop:'-15vh'}} />
 </div>
-<img src={participate} alt='' style={{marginLeft:'40vh'}}/>
-<button className='btn' style={{marginRight:'70vh', marginTop:'-10vh'}}>Read more</button>
+<div className='parti'>
+<img src={participate} alt=''/>
+</div>
+<div className='btn-1'>
+<button className='btn'>Read more</button>
+</div>
 <img src={happy} alt='' style={{marginLeft:'40vh'}}/>
 <img src={outlook} alt='' style={{marginLeft:'10vh'}}/>
 

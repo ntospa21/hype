@@ -29,7 +29,7 @@
 .chartaki {
   height: 650px;
   width: 650px;
-  margin-left: 90vh;
+  margin-left: 100vh;
   margin-top: -45vh;
 }
 
@@ -37,8 +37,28 @@
   margin-left: 45vh;
   margin-top: 20vh;
 }
+.parti {
+  margin-left: 40vh;
+  margin-top: 15vh;
+}
+.btn-1 {
+  margin-left: 86vh;
+  margin-top: -10vh;
+}
 @media screen and (max-width: 700px) {
   .app {
     width: 115rem;
+  }
+  .btn-1 {
+    margin-left: 96vh;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .app {
+    width: 110rem;
+  }
+  .chartaki {
+    margin-right: 25px;
   }
 }
