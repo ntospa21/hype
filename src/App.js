@@ -33,7 +33,7 @@ function App(){
          return(
            <div className='content'>
         <div  className='app' style={{ 
-          backgroundImage: `url(${Backround})`, width:'500%'
+          backgroundImage: `url(${Backround})`,
           
         }}>
         <div>
@@ -88,7 +88,9 @@ function App(){
 </div>
 
 <img src={mission} alt='' style={{marginLeft:'40vh'}}/>
-<img src={citi} alt='' style={{marginLeft:'40vh', marginTop:'15vh'}}/>
+<div className='citi'>
+<img src={citi} alt='' style={{}}/>
+</div>
 <div>
 <button className='btn' style={{marginLeft:'108vh', marginTop:'-10vh'}}>Read more</button>
 
