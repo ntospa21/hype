@@ -68,7 +68,7 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
   .app {
     width: 110rem;
   }
@@ -84,14 +84,5 @@
   }
   .readmore1 {
     margin-left: 15vh;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .app {
-    width: 130rem;
-  }
-  .btn-1 {
-    margin-left: 96vh;
   }
 }
