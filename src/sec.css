@@ -34,7 +34,9 @@
   margin-left: 100vh;
   margin-top: -45vh;
 }
-
+.readmore1 {
+  width: auto;
+}
 .citi {
   margin-left: 45vh;
   margin-top: 20vh;
@@ -46,6 +48,16 @@
 .btn-1 {
   margin-left: 86vh;
   margin-top: -10vh;
+}
+.toggler {
+  margin-left: 20vh;
+  margin-bottom: 10px;
+}
+.katigories {
+  margin-left: 20vh;
+}
+.mission {
+  margin-top: 20vh;
 }
 @media screen and (max-width: 700px) {
   .app {
@@ -63,5 +75,23 @@
   .chartaki {
     margin-left: 105vh;
     margin-top: -60vh;
+  }
+  .katigories {
+    margin-left: 25vh;
+  }
+  .toggler {
+    margin-left: 35vh;
+  }
+  .readmore1 {
+    margin-left: 15vh;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .app {
+    width: 130rem;
+  }
+  .btn-1 {
+    margin-left: 96vh;
   }
 }

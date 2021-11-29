@@ -77,7 +77,7 @@ function App(){
  
 
             <img src={age} alt='' style={{marginLeft:'35vh', marginTop:'10vh'}}/>
-            <div>
+            <div className='toggler'>
             {toggle ? <div >
                         <button className="btn" style={{ marginLeft:'85vh' }}   onClick={toggler} > the average </button>
                         <div style={{marginLeft:'86vh'}}>
@@ -87,19 +87,21 @@ function App(){
                         <div style={{marginLeft:'86vh'}}>
 <img src={aveg} alt='' style={{marginLeft:'5vh'}}/></div> </div>}
 </div>
-<div>
 <img src={work} alt='' style={{marginTop:'10vh', marginLeft:'35vh'}}/> 
+
+<div className='katigories'>
 <p style={{marginLeft:'103vh', fontSize:20, marginTop:'-20vh'}}>EP's work  examples:
 </p>
 
-<p style={{marginLeft:'106vh', fontSize:20}}>Passing EU laws{<button className='btn' onClick={()=>alert('do sth')}>Read more</button>}
+<p style={{marginLeft:'106vh', fontSize:20}}>                   Passing EU laws{<button className='btn' onClick={()=>alert('do sth')}>Read more</button>}
 </p>
 
 <p style={{marginLeft:'84vh', fontSize:20}}>Democratic scrunity of all EU Institutions{<button className='btn' onClick={()=>alert('do sth')}>Read more</button>}
 </p>
 </div>
-
+<div className='mission'>
 <img src={mission} alt='' style={{marginLeft:'40vh'}}/>
+</div>
 <div className='citi'>
 <img src={citi} alt='' />
 </div>
