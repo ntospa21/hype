@@ -1,4 +1,4 @@
-import React , {useState, useEffect}from 'react';
+import React , {useState}from 'react';
 import  Backround from './assets/Backround.svg'
 import eprs from './assets/eprs.svg'
 import dentra from './assets/dentra.png'
@@ -17,18 +17,21 @@ import participate from './assets/Participate in programs that help you find a j
 import happy from './assets/Icon happy.svg'
 import outlook from './assets/Outlook.png'
 import Dokimi from './dokimi';
+import Theseis from './Theseis'
 import './sec.css'
+
+
 
 function App(){
 
   const [toggle, setToggle] = useState(false)
- 
-  
+  const [allagi, setAllagi] = useState(false)
   const toggler = () =>{
     toggle ? setToggle(false)  : setToggle(true)  ;
   }
-  
- 
+  const allakse = () =>{
+    allagi ? setAllagi(false) : setAllagi(true)
+  }
  
          return(
            <div className='content'>
@@ -61,12 +64,20 @@ function App(){
 <img src={theup} style={{marginLeft:'35vh', marginTop:'12vh'}} alt=''/>
 </div>
 <div className='chartaki'>
-<Dokimi/>
+{allagi ? <div >
+                        <button className="btn" style={{ marginLeft:'5vh' , fontSize:12 }}   onClick={allakse} > The Percentage  </button>
+                        <div style={{}}>
+<Dokimi/> </div></div>: 
+<div  >
+                        <button className="btn" style={{ marginLeft:'5vh'}}    onClick={allakse} >  The MEPs </button>
+                        <div style={{}}>
+<Theseis/></div> </div>}
+<div></div>
 </div>
+ 
 
-            
-          
             <img src={age} alt='' style={{marginLeft:'35vh', marginTop:'10vh'}}/>
+            <div>
             {toggle ? <div >
                         <button className="btn" style={{ marginLeft:'85vh' }}   onClick={toggler} > the average </button>
                         <div style={{marginLeft:'86vh'}}>
@@ -75,6 +86,7 @@ function App(){
                         <button className="btn" style={{ marginLeft:'85vh'}}    onClick={toggler} >   the younger</button>
                         <div style={{marginLeft:'86vh'}}>
 <img src={aveg} alt='' style={{marginLeft:'5vh'}}/></div> </div>}
+</div>
 <div>
 <img src={work} alt='' style={{marginTop:'10vh', marginLeft:'35vh'}}/> 
 <p style={{marginLeft:'103vh', fontSize:20, marginTop:'-20vh'}}>EP's work  examples:

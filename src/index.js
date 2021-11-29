@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Dime from './dime';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Respo from './Responsive';
 
 ReactDOM.render(
   <React.StrictMode>
